@@ -43,8 +43,8 @@ public class OperadorTuristico extends Empleado  {
     @Override
     public String toString() {
         return super.toString() +
-                ". Área de operación: " + areaOperacion +
-                ". Turno: " + turno;
+                ". \nÁrea de operación: " + areaOperacion +
+                ". \nTurno: " + turno;
 
     }
 }

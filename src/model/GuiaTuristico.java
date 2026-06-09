@@ -42,7 +42,7 @@ public class GuiaTuristico extends Empleado {
     @Override
     public String toString() {
         return super.toString() +
-                ". Idioma: " + idioma +
-                ". Especialidad: " + especialidad;
+                ". \nIdioma: " + idioma +
+                ". \nEspecialidad: " + especialidad;
     }
 }

@@ -59,7 +59,7 @@ public class Empleado extends Persona {
     public String toString() {
 
         return super.toString() +
-                ". Cargo: " + cargo +
-                ". Sueldo: $" + sueldo;
+                ". \nCargo: " + cargo +
+                ". \nSueldo: $" + sueldo;
     }
 }

@@ -43,7 +43,7 @@ public class Cliente extends Persona {
     @Override
     public String toString() {
         return super.toString() +
-                ". Tour reservado: " + tourReservado +
-                ". Cantidad de personas: " + cantidadPersonas;
+                ". \nTour reservado: " + tourReservado +
+                ". \nCantidad de personas: " + cantidadPersonas;
     }
 }
