@@ -1,16 +1,21 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
-# 🧠 Evaluación Final Transversal – Desarrollo Orientado a Objetos I
+# 🧠 Evaluación Sumativa 1 – Desarrollo Orientado a Objetos I
 
 ## 👤 Autor del proyecto
-- **Nombre completo:** [Escribe aquí tu nombre]
-- **Sección:** [Escribe aquí tu sección]
+- **Nombre completo:** Maximiliano Villalobos
 - **Carrera:** Ingeniería en Informática
-- **Sede:** [Escribe aquí tu sede, por ejemplo: Puerto Montt]
+- **Sede:** Campus Virtual
 
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto corresponde a la Evaluación Final Transversal de la asignatura *Desarrollo Orientado a Objetos I*. Se trata de un sistema orientado a objetos desarrollado en Java, cuyo objetivo es modelar y gestionar entidades representativas de un dominio real, aplicando los principios de encapsulamiento, composición, herencia, polimorfismo e interfaces.
+Este proyecto corresponde a la Actividad Sumativa I de la asignatura Desarrollo Orientado a Objetos I.
+
+El sistema modela las principales entidades relacionadas con una agencia de turismo llamada Llanquihue Tour, aplicando conceptos fundamentales de la Programación Orientada a Objetos (POO) mediante el lenguaje Java.
+
+La solución implementa clases organizadas en paquetes, utilizando principios como encapsulamiento, composición, herencia, constructores, validación de atributos y reutilización de código. Para ello, se representan distintos actores vinculados a la agencia, tales como empleados, clientes, proveedores, guías turísticos y operadores turísticos, permitiendo gestionar su información de manera estructurada y modular.
+
+El proyecto incluye además una clase principal encargada de crear instancias de los objetos y demostrar el funcionamiento del modelo mediante la salida de información por consola.
 
 El proyecto fue desarrollado a partir de un caso contextualizado, abordando problemáticas reales y proponiendo una solución estructurada, modular y reutilizable.
 
@@ -18,16 +23,54 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 
 ## 🧱 Estructura general del proyecto
 
-```plaintext
-📁 src/
-├── app/         # Clase principal con el método main
-├── model/       # Clases de dominio (Persona, Cliente, Empleado, Producto, etc.)
-├── data/        # Clases para la carga y lectura de archivos .txt
-├── utils/       # Utilidades y validaciones
-└── interfaces/  # Interfaces implementadas por las clases
-````
 
----
+```plaintext
+src
+├── app
+├── model
+└── util
+```
+
+### 📂 Paquete `app`
+
+Contiene la clase principal del sistema:
+
+* `Main.java`: punto de entrada de la aplicación. Permite crear y visualizar los distintos objetos del sistema mediante la consola.
+
+### 📂 Paquete `model`
+
+Contiene las clases que representan las entidades del dominio de la agencia de turismo:
+
+* `Persona`
+* `Direccion`
+* `Empleado`
+* `Cliente`
+* `Proveedor`
+* `GuiaTuristico`
+* `OperadorTuristico`
+
+### 📂 Paquete `util`
+
+Contiene clases de apoyo reutilizables:
+
+* `Utilidades`: métodos auxiliares para validaciones y formateo de salida por consola.
+
+### 🔗 Relación entre clases
+
+```plaintext
+Persona
+├── Cliente
+├── Proveedor
+└── Empleado
+    ├── GuiaTuristico
+    └── OperadorTuristico
+
+Persona
+└── Direccion (Composición)
+```
+
+Esta estructura permite aplicar los principios de encapsulamiento, composición y herencia, facilitando la reutilización de código y la organización modular del proyecto.
+
 
 
 
@@ -36,23 +79,21 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 1. Clona el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/usuario/repositorio-evaluacion-final.git
+git clone https://github.com/devmaxpower/SistemaLlanquihueTour.git
 ```
 
 2. Abre el proyecto en IntelliJ IDEA.
 
-3. Verifica que los archivos `.txt` estén correctamente ubicados.
+3. Ejecuta el archivo `Main.java` desde el paquete `app`.
 
-4. Ejecuta el archivo `Main.java` desde el paquete `app`.
-
-5. Sigue las instrucciones en consola o en la interfaz gráfica (si corresponde).
+4. Sigue las instrucciones en consola o en la interfaz gráfica (si corresponde).
 
 
 ---
 
-**Repositorio GitHub:** \[Pega aquí el enlace al repositorio]
-**Fecha de entrega:** \[DD/MM/2025]
+**Repositorio GitHub:** \https://github.com/devmaxpower/SistemaLlanquihueTour.git
+**Fecha de entrega:** \08/06/2026
 
 ---
 
-© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Final Transversal EFT
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Sumativa I
