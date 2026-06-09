@@ -3,7 +3,7 @@
 
 ## 👤 Autor del proyecto
 - **Nombre completo:** Maximiliano Villalobos
-- **Carrera:** Ingeniería en Informática
+- **Carrera:** Analista Programador Computacional
 - **Sede:** Campus Virtual
 
 ---
