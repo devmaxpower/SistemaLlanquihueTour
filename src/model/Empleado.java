@@ -1,37 +1,65 @@
 package model;
 
 public class Empleado extends Persona {
+
     private String cargo;
     private double sueldo;
 
-    public Empleado(){
+    // Constructor vacío
+    public Empleado() {
         super();
-        cargo = "Developer";
-        sueldo = 574000.0;
+        setCargo("Guía Turístico");
+        setSueldo(574000.0);
     }
-    //constructor con parametros
-    public Empleado(String nombre, Direccion direccion, String cargo, double sueldo){
-        super(nombre, direccion);
-        this.cargo = cargo;
-        this.sueldo = sueldo;
 
+    // Constructor con parámetros
+    public Empleado(
+            String nombre,
+            String rut,
+            String telefono,
+            Direccion direccion,
+            String cargo,
+            double sueldo) {
+
+        super(nombre, rut, telefono, direccion);
+
+        setCargo(cargo);
+        setSueldo(sueldo);
     }
-    //getters
-    public String getCargo(){
+
+    // Getters
+    public String getCargo() {
         return cargo;
     }
-    public double getSueldo(){
+
+    public double getSueldo() {
         return sueldo;
     }
-    //setters
-    public void setCargo( String nuevoCargo){
-        cargo = nuevoCargo;
+
+    // Setters
+    public void setCargo(String nuevoCargo) {
+
+        if (nuevoCargo == null || nuevoCargo.isBlank()) {
+            this.cargo = "Cargo no informado";
+        } else {
+            this.cargo = nuevoCargo;
+        }
     }
-    public void setSueldo( double nuevoSueldo){
-        sueldo = nuevoSueldo;
+
+    public void setSueldo(double nuevoSueldo) {
+
+        if (nuevoSueldo < 0) {
+            this.sueldo = 0;
+        } else {
+            this.sueldo = nuevoSueldo;
+        }
     }
+
     @Override
-    public String toString(){
-        return super.toString() + " Cargo: " + cargo + "Sueldo: " + sueldo;
+    public String toString() {
+
+        return super.toString() +
+                ". Cargo: " + cargo +
+                ". Sueldo: $" + sueldo;
     }
 }
