@@ -152,7 +152,7 @@ git clone https://github.com/devmaxpower/LlanquihueTourApp.git
 
 ---
 
-**Repositorio GitHub:** https://github.com/devmaxpower/LlanquihueTourApp
+**Repositorio GitHub:** https://github.com/devmaxpower/SistemaLlanquihueTour.git
 
 **Fecha de entrega:** 22/06/2026
 
