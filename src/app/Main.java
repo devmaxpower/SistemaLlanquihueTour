@@ -27,8 +27,11 @@ public class Main{
         GestorPersonas gestorPersonas = new GestorPersonas();
         PersonaService personaService = new PersonaService();
 
-        //obtener y clasificar datos desde el archivo
-        ArrayList<Persona> personas = gestorPersonas.leerPersonas("Resources/personas.txt");
+        // Carga desde TXT
+        // ArrayList<Persona> personas = gestorPersonas.leerPersonasDesdeTxt("resources/personas.txt");
+
+        // Carga desde Excel
+        ArrayList<Persona> personas = gestorPersonas.leerPersonasDesdeExcel("personas.xlsx");
 
         Utilidades.adornoTitulo("LISTADO COMPLETO DE PERSONAS");
         mostrarLista(personas);
