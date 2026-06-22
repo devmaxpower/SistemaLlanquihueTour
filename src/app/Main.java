@@ -1,95 +1,87 @@
 package app;
-import model.*;
+
+import data.GestorPersonas;
+import model.Persona;
+import service.PersonaService;
 import util.Utilidades;
 
+import java.util.ArrayList;
+
+/**
+ * Clase principal de la aplicación Llanquihue Tour.
+ * Carga personas desde un archivo externo, almacena los datos
+ * en una colección dinámica y aplica búsquedas y filtros.
+ *
+ * @author Maximiliano Villalobos
+ * @version 1.0
+ */
+
 public class Main{
+    /**
+     * Método principal de ejecución del sistema.
+     *
+     * @param args Argumentos de línea de comandos.
+     */
     public static void main(String[] args) {
-        //Creando direcciones
-        Direccion direccion1 = new Direccion(
-                "Av. Vicuña mackenna  123",
-                "Santiago",
-                "Chile"
-        );
-        Direccion direccion2 = new Direccion(
-                "Costanera 232323",
-                "Puerto Varas",
-                "Chile"
-        );
-        Direccion direccion3 = new Direccion(
-                "Av. Del Lago 0001",
-                "Llanquihue",
-                "Chile"
-        );
-        //Creando empleados
-        Empleado empleado1 = new Empleado(
-                "Juan Peréz",
-                "18.048.360-8",
-                "+56999999999",
-                direccion1,
-                "Coordindor de Tours",
-                1200000
+        //instancia de personas y servicios
+        GestorPersonas gestorPersonas = new GestorPersonas();
+        PersonaService personaService = new PersonaService();
 
-        );
-        GuiaTuristico guiaTuristico1 = new GuiaTuristico(
-                "Tulio Tribiño",
-                "15.111.222-3",
-                "+56988884445",
-                direccion3,
-                "Guia Turistico",
-                970000,
-                "Inglés",
-                "Turismo Ecológico"
-        );
-        OperadorTuristico operadorTuristico1 = new OperadorTuristico(
-                "Juan Carlos bodoque",
-                "17.333.444-5",
-                "+56977664445",
-                direccion1,
-                "Operador",
-                850000,
-                "Excursiones",
-                "Diurno"
-        );
+        //obtener y clasificar datos desde el archivo
+        ArrayList<Persona> personas = gestorPersonas.leerPersonas("Resources/personas.txt");
 
-        //Creando clientes
-        Cliente cliente1 = new Cliente(
-                "Maria Antonieta de la nieves",
-                "16.234.567-9",
-                "+56234345657",
-                direccion2,
-                "Ruta Gastronomica de los Lagos",
-                4
-        );
-
-        //Creando proveedores
-        Proveedor  proveedor1 = new Proveedor(
-                "Luis Miguel",
-                "18.048.360-8",
-                "+56955556666",
-                direccion2,
-                "Músico de eventos",
-                "La banda de LuisMi"
-        );
-
-        //Imprimir datos
-        Utilidades.adornoTitulo("EMPLEADOS");
-        System.out.println(empleado1);
+        Utilidades.adornoTitulo("LISTADO COMPLETO DE PERSONAS");
+        mostrarLista(personas);
         Utilidades.LineaSeparador();
 
-        Utilidades.adornoTitulo("GUÍAS TURÍSTICOS");
-        System.out.println(guiaTuristico1);
+        Utilidades.adornoTitulo("GUIAS TURÍSTICOS");
+        mostrarLista(personaService.obtenerGuias(personas));
         Utilidades.LineaSeparador();
 
-        Utilidades.adornoTitulo("OPERADORES");
-        System.out.println(operadorTuristico1);
+        Utilidades.adornoTitulo("OPERADORES TURÍSTICOS");
+        mostrarLista(personaService.obtenerOperadores(personas));
         Utilidades.LineaSeparador();
 
         Utilidades.adornoTitulo("CLIENTES");
-        System.out.println(cliente1);
+        mostrarLista(personaService.obtenerClientes(personas));
         Utilidades.LineaSeparador();
 
         Utilidades.adornoTitulo("PROVEEDORES");
-        System.out.println(proveedor1);
+        mostrarLista(personaService.obtenerProveedores(personas));
         Utilidades.LineaSeparador();
+
+        Utilidades.adornoTitulo("EMPLEADOS");
+        mostrarLista(personaService.obtenerEmpleados(personas));
+        Utilidades.LineaSeparador();
+
+        Utilidades.adornoTitulo("BÚSQUEDA POR RUT");
+
+        Persona personaEncontrada = personaService.buscarPorRut(personas, "15.111.222-3");
+
+
+
+        if(personaEncontrada != null) {
+            System.out.println("Persona encontrada");
+            System.out.println(personaEncontrada);
+        }else {
+            System.out.println("No se encontró el rut buscado");
+        }
+
+        Utilidades.LineaSeparador();
+
+    }
+    /**
+     * Muestra por consola los elementos de una colección de personas.
+     *
+     * @param personas Colección de personas a mostrar.
+     */
+    public static void mostrarLista(ArrayList<Persona> personas){
+        if(personas.isEmpty()){
+            System.out.println("No existen personas");
+        }else {
+            for(Persona persona : personas){
+                System.out.println(persona);
+            }
+        }
     }
 }

@@ -1,0 +1,5 @@
+EMPLEADO;Juan Pérez;18.048.360-8;+56999999999;Av. Vicuña Mackenna 123;Santiago;Chile;Coordinador de Tours;1200000
+GUIA;Tulio Tribiño;15.111.222-3;+56988884445;Av. Del Lago 0001;Llanquihue;Chile;Guía Turístico;970000;Inglés;Turismo Ecológico
+OPERADOR;Juan Carlos Bodoque;17.333.444-5;+56977664445;Costanera 232323;Puerto Varas;Chile;Operador;850000;Excursiones;Diurno
+CLIENTE;María Antonieta de las Nieves;16.234.567-9;+56234345657;Costanera 232323;Puerto Varas;Chile;Ruta Gastronómica de los Lagos;4
+PROVEEDOR;Luis Miguel;18.048.360-8;+56955556666;Av. Del Lago 0001;Llanquihue;Chile;Músico de eventos;La banda de LuisMi
