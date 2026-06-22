@@ -1,5 +1,5 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
-# 🧠 Evaluación Sumativa 1 – Desarrollo Orientado a Objetos I
+# 🧠 Evaluación Sumativa 2 – Desarrollo Orientado a Objetos I
 
 ## 👤 Autor del proyecto
 - **Nombre completo:** Maximiliano Villalobos
@@ -9,7 +9,7 @@
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto corresponde a la Actividad Sumativa I de la asignatura Desarrollo Orientado a Objetos I.
+Este proyecto corresponde a la Actividad Sumativa II de la asignatura Desarrollo Orientado a Objetos I.
 
 El sistema modela las principales entidades relacionadas con una agencia de turismo llamada Llanquihue Tour, aplicando conceptos fundamentales de la Programación Orientada a Objetos (POO) mediante el lenguaje Java.
 
