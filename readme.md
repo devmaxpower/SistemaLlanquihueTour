@@ -60,7 +60,7 @@ Contiene las clases que representan las entidades del dominio de la agencia de t
 
 Contiene las clases encargadas de la lectura y carga de información desde archivos externos:
 
-- `GestorPersonas`: lee el archivo `personas.txt`, procesa cada línea y crea los objetos correspondientes para almacenarlos en una colección dinámica.
+- `GestorPersonas`: lee el archivo `personas.xlsx`, procesa cada línea y crea los objetos correspondientes para almacenarlos en una colección dinámica.
 
 ### 📂 Paquete `service`
 
@@ -93,7 +93,7 @@ Esta estructura permite aplicar los principios de encapsulamiento, composición 
 ### 🔗 Flujo de funcionamiento
 
 ```plaintext
-personas.txt
+personas.xlsx
       │
       ▼
 GestorPersonas
@@ -114,7 +114,7 @@ La aplicación carga información desde un archivo externo, transforma cada regi
 
 ## ⚙️ Funcionalidades implementadas
 
-- Lectura de datos desde archivo externo (`personas.txt`).
+- Lectura de datos desde archivo externo (`personas.xlsx`).
 - Uso de colecciones dinámicas mediante `ArrayList`.
 - Creación de objetos a partir de registros de texto.
 - Aplicación de herencia y composición.
@@ -137,7 +137,7 @@ git clone https://github.com/devmaxpower/LlanquihueTourApp.git
 
 2. Abre el proyecto en IntelliJ IDEA.
 
-3. Verifica que el archivo `personas.txt` se encuentre dentro de la carpeta `resources`.
+3. Verifica que el archivo `personas.xlsx` se encuentre dentro de la carpeta `resources`.
 
 4. Ejecuta el archivo `Main.java` desde el paquete `app`.
 
