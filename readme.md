@@ -35,7 +35,7 @@ src
 └── util
 
 resources
-└── personas.txt
+└── personas.xlsx
 ```
 
 ### 📂 Paquete `app`
