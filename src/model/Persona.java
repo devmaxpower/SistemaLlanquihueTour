@@ -1,18 +1,33 @@
 package model;
 import util.Utilidades;
-
+/**
+ * Constructor por defecto.
+ * Inicializa la persona con valores predeterminados.
+ */
 public class Persona {
     private String nombre;
     private String rut;
     private String telefono;
     private Direccion direccion;
     //constructor
+    /**
+     * Constructor por defecto.
+     * Inicializa la persona con valores predeterminados.
+     */
     public Persona(){
         setNombre("Max Villalobos");
         setRut("18.048.360-8");
         setTelefono("+56912345678");
         setDireccion(new Direccion());
     }
+    /**
+     * Constructor con parámetros.
+     *
+     * @param nombre Nombre de la persona.
+     * @param rut RUT de la persona.
+     * @param telefono Teléfono de contacto.
+     * @param direccion Dirección asociada.
+     */
     //constructor con parametros
     public Persona(String nombre, String rut, String telefono, Direccion direccion){
         setNombre(nombre);
@@ -68,6 +83,11 @@ public class Persona {
         }
     }
     //seters
+    /**
+     * Devuelve una representación textual de la persona.
+     *
+     * @return Información de la persona en formato String.
+     */
     @Override
     public String toString(){
 

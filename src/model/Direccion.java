@@ -1,16 +1,33 @@
 package model;
-
+/**
+ * Representa una dirección física.
+ * Contiene calle, ciudad y país.
+ *
+ * @author Maximiliano Villalobos
+ * @version 1.0
+ */
 public class Direccion {
     private String calle;
     private String ciudad;
     private String pais;
     //constructor
+    /**
+     * Constructor por defecto.
+     * Inicializa la dirección con valores predeterminados.
+     */
     public Direccion(){
         setCalle("Enrique Segoviano");
         setCiudad("Llanquihue");
         setPais("Chile");
     }
     //Constructor con parametros
+    /**
+     * Constructor con parámetros.
+     *
+     * @param calle Calle de la dirección.
+     * @param ciudad Ciudad de la dirección.
+     * @param pais País de la dirección.
+     */
     public Direccion(String calle, String ciudad, String pais){
         setCalle(calle);
         setCiudad(ciudad);
@@ -48,6 +65,11 @@ public class Direccion {
             this.pais = nuevoPais;
         }
     }
+    /**
+     * Devuelve una representación textual de la dirección.
+     *
+     * @return Información de la dirección en formato String.
+     */
     @Override
     public String toString(){
         return "\nCalle: "+ calle +
